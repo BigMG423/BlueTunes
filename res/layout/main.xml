@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textSize="25dp"
+		android:textColor="#8F8"
+		android:text="@string/titlestring"
+		/>
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentBottom="true"
+		>
+		<Button
+			android:id="@+id/playmusic"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Play Music"
+			/>
+		<Button
+			android:id="@+id/finddevices"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/playmusic"
+			android:layout_marginLeft="10dp"
+			android:text="Find Devices"
+			/>
+	</RelativeLayout>
+</RelativeLayout>

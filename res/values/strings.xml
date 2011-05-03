@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="titlestring">BlueTunes</string>
+    <string name="app_name">BlueTunes</string>
+    <string name="availabledevicestr">Available Devices</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<TextView
+		android:id="@+id/availabledevicestext"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textSize="25dp"
+		android:textColor="#8F8"
+		android:text="@string/availabledevicestr"
+		/>
+	<ListView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@id/android:list"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/availabledevicestext"
+		android:padding="10dp">
+		</ListView>
+	<Button
+		android:id="@+id/connect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentBottom="true"
+		android:text="Connect"
+		/>
+</RelativeLayout>
