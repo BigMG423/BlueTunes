@@ -1,0 +1,19 @@
+Project / code info
+
+Notable classes:
+Activity - corresponds to a screen.  Each screen gets its own Activity.  New activities are started using startActivity, and you return to the previous activity using the back button on the phone.
+	MainActivity - main screen.
+	FindDevicesActivity - shows BlueTooth devices in range and allows you to connect (and displays those that you're already connected to)
+
+
+Layout ideas:
+Main screen - title, image background, buttons/other fancy things to navigate
+Find Devices screen - text at top, list of checkable (CheckedTextView) devices that the search finds, buttons for connect/disconnect from available devices
+Play Music screen - interfaced with music player?  Not quite sure how to do this one.
+
+
+TODO:
+- Figure out the ListView UI of the find devices screen so that you can display the devices as you find them
+- Search for nearby devices via BlueTooth; collaborate results here with the "adapter" class required to display info in the ListView
+- Interface with the music player to display media on the phone and play it; alternatively, if we can't figure that out, it's probably doable to do a file search through the phone and create your own media library, and then use the built in "media player" objects to play music.
+- Connect to multiple devices at the same time and allow for file transfer / streaming to multiple devices simultaneously.  In original file transfer test, the built-in way is to queue up one phone and only transfer to one at a time.  Also, keep-alive to make sure connections aren't dropped.
