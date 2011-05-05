@@ -1,31 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-	<TextView
-		android:id="@+id/availabledevicestext"
-		android:layout_width="wrap_content" 
-		android:layout_height="wrap_content"
-		android:layout_centerHorizontal="true"
-		android:textSize="25dp"
-		android:textColor="#8F8"
-		android:text="@string/availabledevicestr"
-		/>
-	<ListView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@id/android:list"
-		android:layout_alignParentLeft="true"
-		android:layout_below="@+id/availabledevicestext"
-		android:padding="10dp">
-		</ListView>
-	<Button
-		android:id="@+id/connect"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_centerHorizontal="true"
-		android:layout_alignParentBottom="true"
-		android:text="Connect"
-		/>
-</RelativeLayout>
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <RelativeLayout
+            	android:layout_width="fill_parent"
+            	android:layout_height="fill_parent"
+            	android:id="@+id/availabledeviceslayout">
+	            <ListView
+	            	android:id="@+id/availabledeviceslist"
+	            	android:layout_width="fill_parent"
+	            	android:layout_height="fill_parent"
+	            	android:layout_above="@+id/connectbutton"
+	            	android:choiceMode="multipleChoice"
+	            	/>
+	            <Button
+	            	android:id="@+id/connectbutton"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:layout_centerHorizontal="true"
+	            	android:layout_alignParentBottom="true"
+	            	android:text="Connect" />
+	        </RelativeLayout>
+			<RelativeLayout
+            	android:layout_width="fill_parent"
+            	android:layout_height="fill_parent"
+            	android:id="@+id/connecteddeviceslayout">
+				<ListView
+	            	android:id="@+id/connecteddeviceslist"
+	            	android:layout_width="fill_parent"
+	            	android:layout_height="fill_parent"
+	            	android:layout_above="@+id/disconnectbutton"
+	            	android:choiceMode="multipleChoice"
+	            	 />
+				<RelativeLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:layout_alignParentBottom="true">
+		            <Button
+		            	android:id="@+id/disconnectbutton"
+		            	android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		            	android:text="Disconnect" />
+		            <Button
+		            	android:id="@+id/disconnectallbutton"
+		            	android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		            	android:layout_toRightOf="@+id/disconnectbutton"
+		            	android:layout_marginLeft="25dp"
+		            	android:text="Disconnect All" />
+				</RelativeLayout>
+	        </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>
