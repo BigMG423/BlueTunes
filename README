@@ -1,5 +1,12 @@
 Project / code info
 
+Jessica Comments 05/08/11:
+1. Had to comment out @Override in private class ClickListener on top of onClick function for both MainActivity.java and FindDeviceActivity.java in order to get rid of error.
+2. Included two Bluetooth permissions in AndroidManifest.xml
+3. Added code in the main.xml under res/layout to create a background for our app menu. I included the bluerobot.jpg file in the drawable-hdpi,ldpi,andmdpi folders. 
+4. Added Bluetooth imports to MainActivity.java
+5. Added mBluetoothAdapter object to MainActivity.java
+
 Notable classes:
 Activity - corresponds to a screen.  Each screen gets its own Activity.  New activities are started using startActivity, and you return to the previous activity using the back button on the phone.
 	MainActivity - main screen.
