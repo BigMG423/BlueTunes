@@ -82,7 +82,7 @@ public class FindDeviceActivity extends TabActivity
 	
 	private class clickListener implements View.OnClickListener
 	{
-		@Override
+		//@Override
 		public void onClick(View v) {
 			switch (v.getId())
 			{

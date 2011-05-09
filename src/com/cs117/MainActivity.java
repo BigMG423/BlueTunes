@@ -1,12 +1,15 @@
 package com.cs117;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity
 {
@@ -16,6 +19,10 @@ public class MainActivity extends Activity
 	private Button playMusicButton = null;
 	
 	private clickListener cl = new clickListener();
+	
+	public static final String TOAST = "toast";
+	// Local Bluetooth adapter    
+	private BluetoothAdapter mBluetoothAdapter = null;
 	
 	
     /** Called when the activity is first created. */
@@ -34,6 +41,15 @@ public class MainActivity extends Activity
 		playMusicButton.setOnClickListener(cl);
 		
         setContentView(mainView);
+        
+        // Get local Bluetooth adapter        
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        // If the adapter is null, then Bluetooth is not supported        
+        if (mBluetoothAdapter == null) {            
+        	Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();            
+        	finish();            
+        	return;        
+        	}
     }
     
     private void findDevices()
@@ -43,7 +59,7 @@ public class MainActivity extends Activity
     
     private class clickListener implements View.OnClickListener
     {
-		@Override
+		//@Override
 		public void onClick(View v)
 		{
 			if (v.getId() == R.id.finddevices)
