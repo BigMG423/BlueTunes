@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FindDeviceActivity"></activity>
+        
+        android:debuggable="true" 
 
     </application>
 </manifest>
