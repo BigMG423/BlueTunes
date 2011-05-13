@@ -3,4 +3,5 @@
     <string name="titlestring">BlueTunes</string>
     <string name="app_name">BlueTunes</string>
     <string name="availabledevicestr">Available Devices</string>
+    <string name="remotemp3mode">Remote Mp3 Mode</string>
 </resources>

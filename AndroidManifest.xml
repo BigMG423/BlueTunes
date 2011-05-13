@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".FindDeviceActivity"></activity>
+        <activity android:name=".RemoteMp3ModeActivity"></activity>
         
         android:debuggable="true" 
 
