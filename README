@@ -1,5 +1,16 @@
 Project / code info
 
+Jessica Comments 05/12/11:
+1. Added "Remote mp3 Mode" Button to MainActivity and main.xml that 
+   launches RemoteMp3ModeActivity.
+2. Added RemoteMp3ModeActivity and remotemp3mode.xml which plays mp3
+   from res/raw folder on android phone.
+TODO: 
+1. I want the master phone to play this mp3 and concurrently send a
+   Bluetooth command to play same mp3 on slave phone. Later, we can
+   add GPS clock to delay the playing of the mp3 on both phones so that
+   we can have not only one slave but multiple slaves (hopefully!).
+
 Jessica Comments 05/08/11:
 1. Had to comment out @Override in private class ClickListener on top of onClick function for both MainActivity.java and FindDeviceActivity.java in order to get rid of error.
 2. Included two Bluetooth permissions in AndroidManifest.xml
