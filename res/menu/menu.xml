@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:id="@+id/musicmenuitem"
+		android:title="Music"/>
+	<item
+		android:id="@+id/devicesmenuitem"
+		android:title="Devices"/>
+	<group>
+		<item
+			android:id="@+id/prevsong"
+			android:icon="@drawable/ic_media_previous"
+			android:title="Previous"/>
+		<item
+			android:id="@+id/playpause"
+			android:icon="@drawable/ic_media_play"
+			android:title="Play"/>
+		<item
+			android:id="@+id/nextsong"
+			android:icon="@drawable/ic_media_next"
+			android:title="Next"/>
+	</group>
+</menu>

@@ -19,18 +19,26 @@
 		android:layout_alignParentBottom="true"
 		>
 		<Button
+			android:id="@+id/finddevices"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Find Devices"
+			/>
+		<Button
 			android:id="@+id/playmusic"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/finddevices"
+			android:layout_marginLeft="10dp"
 			android:text="Play Music"
 			/>
 		<Button
-			android:id="@+id/finddevices"
+			android:id="@+id/stopbutton"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_toRightOf="@+id/playmusic"
 			android:layout_marginLeft="10dp"
-			android:text="Find Devices"
+			android:text="Stop Music"
 			/>
 	</RelativeLayout>
 </RelativeLayout>

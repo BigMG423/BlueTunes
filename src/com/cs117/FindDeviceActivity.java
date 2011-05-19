@@ -1,18 +1,13 @@
 package com.cs117;
 
-import java.util.LinkedList;
-
 import android.app.TabActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.TabHost;
-import android.widget.TextView;
 
 public class FindDeviceActivity extends TabActivity
 {
@@ -100,6 +95,5 @@ public class FindDeviceActivity extends TabActivity
 				break;
 			}
 		}
-		
-	}
+	};
 }
