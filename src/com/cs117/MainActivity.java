@@ -30,8 +30,6 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         
-        app = (BlueTunes) getApplication();
-        
         
         LayoutInflater inflater = this.getLayoutInflater();
 		mainView = inflater.inflate(R.layout.main, null);
@@ -59,6 +57,11 @@ public class MainActivity extends Activity
     	MenuInflater inf = getMenuInflater();
     	inf.inflate(R.menu.menu, menu);
     	return true;
+    }
+
+    public void onResume()
+    {
+        app = (BlueTunes) getApplication();
     }
     
     public void onPause()
